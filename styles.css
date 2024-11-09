@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  .input {
+    width: 50px;
+    margin: 5px;
+  }
+  
+  .results {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #22a083;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1a7f6b;
+  }
+  
+  /* Contenedor de los botones para alinearlos en fila */
+  .button-container {
+    display: flex;
+    gap: 2cm; /* Separación de 2 centímetros entre los botones */
+    margin-top: 20px;
+  }
+  
