@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Fila Dinámicamente con Subceldas, Resultados y Exportación a PDF</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Cargar jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.27/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+
+  <table border="1" id="mainTable">
+    <thead>
+      <tr>
+        <th>#</th> <!-- Columna de numeración -->
+        <th>Nombre del Evaluado</th> <!-- Nueva columna de nombres -->
+        <th>Tristeza y Depresion</th>
+        <th>Ansiedad</th>
+        <th>Ira-Ostilidad</th>
+        <th>Alegria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Fila inicial -->
+      <tr class="dataRow">
+        <td class="rowNumber">1</td> <!-- Fila numerada -->
+        <td>
+          <input type="text" class="name-input" placeholder="Nombre" style="width: 100%;" />
+        </td>
+        
+        <!-- Columna Tristeza y Depresion -->
+        <td>
+          <div>
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+          </div>
+          <div class="results" id="result1">Suma: 0 | División: 0</div>
+        </td>
+
+        <!-- Columna Ansiedad -->
+        <td>
+          <div>
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+          </div>
+          <div class="results" id="result2">Suma: 0 | División: 0</div>
+        </td>
+
+        <!-- Columna Ira-Ostilidad -->
+        <td>
+          <div>
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+          </div>
+          <div class="results" id="result3">Suma: 0 | División: 0</div>
+        </td>
+
+        <!-- Columna Alegria -->
+        <td>
+          <div>
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+            <input type="number" class="input" oninput="sumAndDivide(this)" placeholder="Num">
+          </div>
+          <div class="results" id="result4">Suma: 0 | División: 0</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Botones alineados -->
+  <div class="button-container">
+    <button onclick="addRow()">Agregar Fila</button>
+    <button onclick="deleteRow()">Borrar Última Fila</button>
+    <button onclick="exportToPDF()">Exportar a PDF</button>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="scripts.js"></script>
+
+</body>
+</html>
